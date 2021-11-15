@@ -16,6 +16,7 @@
     background-color: var(--dark-jungle-green);
     color: var(--bright-white);
 }
+
 .title{
     color: var(--spring-frost);
     display: flex;
