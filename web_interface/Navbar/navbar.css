@@ -1,0 +1,123 @@
+
+.nav-container{
+    width: 100%;
+    color: var(--dark-jungle-green);
+    background-color: var(--steel-teal);
+}
+.navbar{
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;
+    align-items: center;
+    height: 50px;
+    width: 90;
+    max-width: 1720px;
+    margin: 0 auto;
+    color: var(--dark-jungle-green);
+    background-color: var(--steel-teal);
+}
+.navbar-logo{
+    justify-self: start;
+    margin-left: 40px;
+    color: var(--dark-jungle-green);
+    background-color: var(--steel-teal);
+
+}
+.navbar-logo{
+    cursor: pointer;
+}
+.nav-menu{
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    list-style-type: none;
+    text-align: center;
+    width: 70%;
+    justify-self: end;
+    color: var(--dark-jungle-green);
+    background-color: var(--steel-teal);
+}
+
+.nav-links{
+    color: var(--dark-jungle-green);
+    background-color: var(--steel-teal);
+    text-decoration: none;
+}
+.nav-links:hover{
+    color: var(--steel-teal);
+    transition: all 0.2s ease-out;
+}
+
+
+.menu-toggle .bar{
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--bright-white);
+    
+}
+
+
+@media screen and (max-width: 768px){
+    .nav-container{
+        position: relative;
+    }
+    .nav-menu{
+        display: gird;
+        grid-template-columns: auto;
+        background: var(--inchworm);
+        margin: 0;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 0;
+        transition: all 0.5s ease;
+    }
+    .navbar-logo{
+        margin-left: 20px;
+
+    }
+    .nav-menu.active{
+        background: var(--steel-teal);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+    .nav-links{
+        text-align: center;
+        line-height: 60px;
+        width: 100%;
+        display: table;
+
+    }
+    .nav-links:hover{
+        background-color: var(--opal);
+        transition: all 0.4s ease-out;
+    }
+    .navbar{
+        width: 100%;
+    }
+    #mobile-menu{
+        position: absolute;
+        top: 20%;
+        right: 5%;
+        transform:  translate(5%, 20%);
+    }
+    .menu-toggle .bar{
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover{
+        cursor: pointer;
+    }
+    #mobile-menu.is-active .bar:nth-child(2){
+        opacity: 0;
+    }
+    #mobile-menu.is-active .bar:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
