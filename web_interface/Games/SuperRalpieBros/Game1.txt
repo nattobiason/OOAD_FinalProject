@@ -1,0 +1,29 @@
+SUPER MARIO (SUPER RALPHIE??)
+(so like super mario but with a buffalo and its like cu themed or something)
+
+logistics
+- 2D game
+- different levels (aiming to create ~3)
+- user starts at one end and attempt to make it to the finish line
+- there are obsticales, platforms, coins/something to get more points, boxes
+- user can "die" by either falling off frame or being hit by obsticales
+- screen moves with user
+
+components
+- ralphie (object contorled by user)
+- blocks (ground, platforms, places ralphie can stand)
+- coins
+- obsticlas: gaps on the ground, flameing fans, bad guy shooter (ram)
+- (optional) boxes (hit with head to get power up)
+- (optional) power ups
+
+user controls
+- up arrow: jump
+- left/right arrow: move horizonatllu
+- down arrow: shrink/become shorter/dive
+
+
+technical concepts
+- OOP will be used in game logic 
+- phaser used for game graphics
+- gamepad api ??

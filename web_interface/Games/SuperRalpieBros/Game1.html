@@ -8,12 +8,13 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $('#navbar').load('Navbar/navbar.html');
+            $('#navbar').load('/web_interface/Navbar/navbar.html');
         });
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/web_interface/app.css">
     <link rel="stylesheet" href="/web_interface/Navbar/navbar.css">
+    <link rel="stylesheet" href="Game1.css">
     <title>Document</title>
 </head>
 <body>
@@ -25,5 +26,10 @@
     <div class="container">
         <div id="navbar"></div>
     </div>
+
+    <!-- <iframe src="" title="Game 1" class="game-frame"></iframe> -->
+    <canvas id="game-area" ></canvas>
+    <script src="Game1.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,8 @@
+.game-frame{
+    height: 75vh;
+    width: 90vw;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    margin-left: 5vw;
+}
