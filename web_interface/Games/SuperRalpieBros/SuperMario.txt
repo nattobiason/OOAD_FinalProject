@@ -13,7 +13,7 @@ components
 - ralphie (object contorled by user)
 - blocks (ground, platforms, places ralphie can stand)
 - coins
-- obsticlas: gaps on the ground, flameing fans, bad guy shooter (ram)
+- obsticlas: cliffs, spinning flameing fans, bad guy shooter, ram (mushroom)
 - (optional) boxes (hit with head to get power up)
 - (optional) power ups
 

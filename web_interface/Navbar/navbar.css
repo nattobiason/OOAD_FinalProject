@@ -10,10 +10,10 @@
     align-items: center;
     height: 50px;
     width: 90;
-    max-width: 1720px;
+    /* max-width: 1720px; */
     margin: 0 auto;
     color: var(--dark-jungle-green);
-    background-color: var(--steel-teal);
+    background-color: transparent;
 }
 .navbar-logo{
     justify-self: start;
