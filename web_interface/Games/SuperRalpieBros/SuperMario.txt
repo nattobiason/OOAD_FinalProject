@@ -27,3 +27,8 @@ technical concepts
 - OOP will be used in game logic 
 - phaser used for game graphics
 - gamepad api ??
+
+
+
+TO-DO:
+- change ralphies direction when moving left
