@@ -1,21 +1,24 @@
-import Entity from './Entity.js';
-import { Velocity } from './traits/Velocity.js';
+import Entity from './classes/Entity.js';
 import { Go } from './traits/Go.js';
-import { loadRalphieBlock } from './loadblocks.js';
 import { Jump } from './traits/Jump.js';
+import { loadBlockSheet } from './loaders.js';
 
 export function createRalphie(){
-    return loadRalphieBlock()
+    return loadBlockSheet('ralphie')
     .then(block =>{
         const ralphie = new Entity();
         ralphie.size.set(32, 25);
 
         ralphie.addTrait(new Go());
         ralphie.addTrait(new Jump());
-        // ralphie.addTrait(new Velocity());
+
+        function routeFrame(ralphie){
+            return 'ralphie';
+            // if want to animate running, go to ep.7 10:15
+        }
 
         ralphie.draw = function drawRalphie(context){
-            block.draw('ralphie', context, this.pos.x , this.pos.y );
+            block.draw(routeFrame(this), context, 0, 0, ralphie.go.heading < 0);
         }
         
 

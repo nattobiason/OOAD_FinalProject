@@ -1,6 +1,6 @@
-import Level from "./level.js";
+import Block from "./classes/Block.js";
+import Level from "./classes/Level.js";
 import { createBackgroundLayer, createBlockLayer } from "./layers.js";
-import { loadBackgroundBlocks } from "./loadblocks.js";
 
 export  function loadImage(url){
     return new Promise(resolve => {
@@ -11,14 +11,22 @@ export  function loadImage(url){
         image.src = url;
     });
 }
+function loadJSON(url){
+    return fetch(url)
+    .then(r => r.json());
+}
 
 function creatTiles(level, backgrounds){
+    // ep. 6 @20:00, made this faster or something idk, i ignored it
     backgrounds.forEach(background => {
-        background.ranges.forEach(([x1, x2, y1, y2]) => {
-            for (let x = x1; x < x2; x++){
-                for (let y = y1; y < y2; y++){
+        background.ranges.forEach(([xStart, xLen, yStart, yLen]) => {
+            const xEnd = xStart + xLen;
+            const yEnd = yStart + yLen;
+            for (let x = xStart; x < xEnd; x++){
+                for (let y = yStart; y < yEnd; y++){
                     level.tiles.set(x, y, {
                         name: background.tile,
+                        type: background.type,
                     });
                 }
             }
@@ -26,12 +34,40 @@ function creatTiles(level, backgrounds){
     });
 }
 
+export function loadBlockSheet(name){
+    return loadJSON(`/web_interface/Games/SuperRalpieBros/blocks/${name}.json`)
+    .then(sheetSpec => Promise.all([
+        sheetSpec, 
+        loadImage(sheetSpec.imageURL),
+    ]))
+    .then(([sheetSpec, image]) => {
+        const blocks = new Block(
+            image,
+            sheetSpec.tileW,
+            sheetSpec.tileH);
+
+        if(sheetSpec.tiles){
+            sheetSpec.tiles.forEach(tileSpec => {
+                blocks.define(tileSpec.name, tileSpec.index[0], tileSpec.index[1]);
+            });
+        }
+
+        if(sheetSpec.frames){
+            sheetSpec.frames.forEach( frameSpec => {
+                blocks.define(frameSpec.name, ...frameSpec.rect)
+            });
+        }
+
+        return blocks;
+    });
+}
+
 export function loadLevel(name){
-    return Promise.all([
-        fetch(`/web_interface/Games/SuperRalpieBros/levels/${name}.json`)
-        .then(r => r.json()),
-        loadBackgroundBlocks(),
-    ])
+    return loadJSON(`/web_interface/Games/SuperRalpieBros/levels/${name}.json`)
+    .then(levelSpec => Promise.all([
+        levelSpec,
+        loadBlockSheet(levelSpec.blockSheet),
+    ]))
     .then(([levelSpec, backgroundBlock]) =>{
         const level = new Level();
 
@@ -43,7 +79,6 @@ export function loadLevel(name){
         const blockLayer = createBlockLayer(level.entities);
         level.comp.layers.push(blockLayer);
 
-        // console.log(level);
 
         return level;
     });

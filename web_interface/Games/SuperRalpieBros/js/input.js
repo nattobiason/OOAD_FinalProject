@@ -1,4 +1,4 @@
-import Keyboard from "./Keyboard.js";
+import Keyboard from "./classes/Keyboard.js";
 
 export function setupKeyboard(entitiy){
     const input = new Keyboard();
@@ -9,16 +9,19 @@ export function setupKeyboard(entitiy){
         }
         else entitiy.jump.cancel();
 
-        console.log(keyState);
     });
 
-    input.addMapping("ArrowRight", keyState =>{ // right
-        entitiy.go.direction = keyState;
+    input.addMapping("ArrowRight", keyState =>{ 
+        entitiy.go.direction += keyState ? 1 : -1;
     });
 
-    input.addMapping("ArrowLeft", keyState =>{ // left
-        entitiy.go.direction = -keyState;
+    input.addMapping("ArrowLeft", keyState =>{
+        entitiy.go.direction += keyState ? -1 : 1;
     });
+
+    // input.addMapping("ArrowDown", keyState =>{
+        
+    // });
 
     return input;
 }

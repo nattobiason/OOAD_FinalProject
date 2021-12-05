@@ -19,7 +19,7 @@ components
 
 user controls
 - up arrow: jump
-- left/right arrow: move horizonatllu
+- left/right arrow: move horizonatlly
 - down arrow: shrink/become shorter/dive
 
 
@@ -31,4 +31,17 @@ technical concepts
 
 
 TO-DO:
-- change ralphies direction when moving left
+- points: 200 for stomping on mushroom, 100 for coins
+- chance boxes
+- life mushrooms
+- bad guy mushroom
+- points, lives, level at top of screen
+
+last priority:
+- disallow double jumping
+- star power
+- turtle bad guy
+- shooter bad guy
+- down arrow to shrink
+
+

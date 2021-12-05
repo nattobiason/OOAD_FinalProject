@@ -29,7 +29,6 @@ export default class Keyboard{
         }
 
         this.keyStates.set(code, keyState);
-        console.log(this.keyStates);
         this.keyMap.get(code)(keyState);
     }
 
@@ -42,3 +41,4 @@ export default class Keyboard{
 
     }
 }
+// improve keyboard ep.8 2:20

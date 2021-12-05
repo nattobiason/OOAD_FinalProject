@@ -1,34 +1,77 @@
 {
+    "blockSheet": "overworld",
+
     "backgrounds":[
         {
             "tile": "sky",
+            "type": "",
             "ranges":[
                 [
-                    0, 16,
-                    0, 10
+                    0, 212,
+                    0, 14
+                ]
+            ]
+        },
+        {
+            "tile": "platform-1",
+            "type": "static",
+            "ranges":[
+                [
+                    5, 2,
+                    9, 1
+                ]
+            ]
+        },
+        {
+            "tile": "super-box",
+            "type": "static",
+            "ranges":[
+                [
+                    7, 1,
+                    9, 1
                 ]
             ]
         },
         {
             "tile": "ground",
+            "type": "static",
             "ranges": [
                 [
-                    0, 16,
-                    8, 10                
-                ],
-                [
-                    4, 10,
-                    4, 6
+                    0, 212,
+                    12, 2                
                 ]
-
             ]
         },
         {
-            "tile": "platform-1",
-            "ranges": [
+            "tile": "sky",
+            "type": "",
+            "ranges":[
                 [
-                    4, 10,
-                    5, 6
+                    20, 2,
+                    12, 2
+                ]
+            ]
+        },
+        {
+            "tile": "ground",
+            "type": "static",
+            "ranges": [
+
+                [
+                    12, 6, 
+                    11, 1
+                ],
+                [
+                    2, 1, 
+                    11, 1
+                ],
+                [
+                    10, 2,
+                    10, 1
+                ],
+                [
+                    9, 1, 
+                    0, 7
                 ]
 
             ]

@@ -1,3 +1,4 @@
+import { loadLevel } from "../loaders.js";
 import TileResolver from "./TileResolver.js";
 
 export default class TileCollider{
@@ -17,7 +18,7 @@ export default class TileCollider{
 
         matches.forEach(match =>{
 
-            if(match.tile.name !== 'ground'){
+            if(match.tile.type !== 'static'){
                 return;
             }
             if(entity.vel.x > 0){ // if idle is falling
@@ -47,7 +48,7 @@ export default class TileCollider{
 
         matches.forEach(match =>{
 
-            if(match.tile.name !== 'ground'){
+            if(match.tile.type !== 'static'){
                 return;
             }
             if(entity.vel.y > 0){ // if idle is falling
@@ -56,21 +57,18 @@ export default class TileCollider{
                     entity.vel.y = 0;
                 }
             }
-            else if(entity.vel.y < 0){ // if idle is falling
+            else if(entity.vel.y < 0){
                 if(entity.pos.y < match.y2){  // inside the tile
                     entity.pos.y = match.y2;
                     entity.vel.y = 0;
+                }
+                if(match.tile.name == 'super-box'){
+                    match.tile.name = 'platform-3';
+                    console.log(entity);
                 }
             }
         });
     }    
 
-    test(entitiy){
-        this.checkY(entitiy);
-        // const match = this.tiles.matchByPosition(entitiy.pos.x, entitiy.pos.y);
-        // if(match){
-        //     console.log('Matched tile', match, match.tile);
-        // }
-    }
 }
 

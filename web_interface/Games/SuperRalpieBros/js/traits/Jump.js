@@ -1,4 +1,4 @@
-import { Trait } from '../Entity.js';
+import { Trait } from "../classes/Entity.js";
 
 export class Jump extends Trait{
     constructor(){
