@@ -40,18 +40,598 @@
         {
             "name": "life-shroom",
             "index": [3, 1]
-        }
-    ],
-
-    "animations": [
+        },
         {
-            "name": "suuper-box",
-            "frameLen": 1,
-            "frames": [
-                "super-box",
-                "platform-3"
-            ]
+            "name": "bad-shroom",
+            "index": [2, 3]
+        },
+
+
+        {
+            "name": "tube-cap-left",
+            "index": [5, 0]
+        },        
+        {
+            "name": "tube-cap-right",
+            "index": [6, 0]
+        },
+        {
+            "name": "tube-base-left",
+            "index": [5, 1]
+        },
+        {
+            "name": "tube-base-right",
+            "index": [6, 1]
+        },
+
+        
+
+        {
+            "name": "title-1",
+            "index": [0, 5]
+        },
+        {
+            "name": "title-2",
+            "index": [1, 5]
+        },
+        {
+            "name": "title-3",
+            "index": [2, 5]
+        },
+        {
+            "name": "title-4",
+            "index": [3, 5]
+        },
+        {
+            "name": "title-5",
+            "index": [4, 5]
+        },
+        {
+            "name": "title-6",
+            "index": [5, 5]
+        },        
+        {
+            "name": "title-1-1",
+            "index": [0, 6]
+        },
+        {
+            "name": "title-2-1",
+            "index": [1, 6]
+        },
+        {
+            "name": "title-3-1",
+            "index": [2, 6]
+        },
+        {
+            "name": "title-4-1",
+            "index": [3, 6]
+        },
+        {
+            "name": "title-5-1",
+            "index": [4, 6]
+        },
+        {
+            "name": "title-6-1",
+            "index": [5, 6]
+        },        
+        {
+            "name": "title-1-2",
+            "index": [0, 7]
+        },
+        {
+            "name": "title-2-2",
+            "index": [1, 7]
+        },
+        {
+            "name": "title-3-2",
+            "index": [2, 7]
+        },
+        {
+            "name": "title-4-2",
+            "index": [3, 7]
+        },
+        {
+            "name": "title-5-2",
+            "index": [4, 7]
+        },
+        {
+            "name": "title-6-2",
+            "index": [5, 7]
+        },
+
+
+        {
+            "name": "castle-8-0",
+            "index": [ 8 , 0 ]
+        },
+        {
+            "name": "castle-8-1",
+            "index": [ 8 , 1 ]
+        },
+        {
+            "name": "castle-8-2",
+            "index": [ 8 , 2 ]
+        },
+        {
+            "name": "castle-8-3",
+            "index": [ 8 , 3 ]
+        },
+        {
+            "name": "castle-8-4",
+            "index": [ 8 , 4 ]
+        },
+        {
+            "name": "castle-8-5",
+            "index": [ 8 , 5 ]
+        },
+        {
+            "name": "castle-8-6",
+            "index": [ 8 , 6 ]
+        },
+        {
+            "name": "castle-8-7",
+            "index": [ 8 , 7 ]
+        },
+        {
+            "name": "castle-8-8",
+            "index": [ 8 , 8 ]
+        },
+        {
+            "name": "castle-8-9",
+            "index": [ 8 , 9 ]
+        },
+        {
+            "name": "castle-9-0",
+            "index": [ 9 , 0 ]
+        },
+        {
+            "name": "castle-9-1",
+            "index": [ 9 , 1 ]
+        },
+        {
+            "name": "castle-9-2",
+            "index": [ 9 , 2 ]
+        },
+        {
+            "name": "castle-9-3",
+            "index": [ 9 , 3 ]
+        },
+        {
+            "name": "castle-9-4",
+            "index": [ 9 , 4 ]
+        },
+        {
+            "name": "castle-9-5",
+            "index": [ 9 , 5 ]
+        },
+        {
+            "name": "castle-9-6",
+            "index": [ 9 , 6 ]
+        },
+        {
+            "name": "castle-9-7",
+            "index": [ 9 , 7 ]
+        },
+        {
+            "name": "castle-9-8",
+            "index": [ 9 , 8 ]
+        },
+        {
+            "name": "castle-9-9",
+            "index": [ 9 , 9 ]
+        },
+        {
+            "name": "castle-10-0",
+            "index": [ 10 , 0 ]
+        },
+        {
+            "name": "castle-10-1",
+            "index": [ 10 , 1 ]
+        },
+        {
+            "name": "castle-10-2",
+            "index": [ 10 , 2 ]
+        },
+        {
+            "name": "castle-10-3",
+            "index": [ 10 , 3 ]
+        },
+        {
+            "name": "castle-10-4",
+            "index": [ 10 , 4 ]
+        },
+        {
+            "name": "castle-10-5",
+            "index": [ 10 , 5 ]
+        },
+        {
+            "name": "castle-10-6",
+            "index": [ 10 , 6 ]
+        },
+        {
+            "name": "castle-10-7",
+            "index": [ 10 , 7 ]
+        },
+        {
+            "name": "castle-10-8",
+            "index": [ 10 , 8 ]
+        },
+        {
+            "name": "castle-10-9",
+            "index": [ 10 , 9 ]
+        },
+        {
+            "name": "castle-11-0",
+            "index": [ 11 , 0 ]
+        },
+        {
+            "name": "castle-11-1",
+            "index": [ 11 , 1 ]
+        },
+        {
+            "name": "castle-11-2",
+            "index": [ 11 , 2 ]
+        },
+        {
+            "name": "castle-11-3",
+            "index": [ 11 , 3 ]
+        },
+        {
+            "name": "castle-11-4",
+            "index": [ 11 , 4 ]
+        },
+        {
+            "name": "castle-11-5",
+            "index": [ 11 , 5 ]
+        },
+        {
+            "name": "castle-11-6",
+            "index": [ 11 , 6 ]
+        },
+        {
+            "name": "castle-11-7",
+            "index": [ 11 , 7 ]
+        },
+        {
+            "name": "castle-11-8",
+            "index": [ 11 , 8 ]
+        },
+        {
+            "name": "castle-11-9",
+            "index": [ 11 , 9 ]
+        },
+        {
+            "name": "castle-12-0",
+            "index": [ 12 , 0 ]
+        },
+        {
+            "name": "castle-12-1",
+            "index": [ 12 , 1 ]
+        },
+        {
+            "name": "castle-12-2",
+            "index": [ 12 , 2 ]
+        },
+        {
+            "name": "castle-12-3",
+            "index": [ 12 , 3 ]
+        },
+        {
+            "name": "castle-12-4",
+            "index": [ 12 , 4 ]
+        },
+        {
+            "name": "castle-12-5",
+            "index": [ 12 , 5 ]
+        },
+        {
+            "name": "castle-12-6",
+            "index": [ 12 , 6 ]
+        },
+        {
+            "name": "castle-12-7",
+            "index": [ 12 , 7 ]
+        },
+        {
+            "name": "castle-12-8",
+            "index": [ 12 , 8 ]
+        },
+        {
+            "name": "castle-12-9",
+            "index": [ 12 , 9 ]
+        },
+        {
+            "name": "castle-13-0",
+            "index": [ 13 , 0 ]
+        },
+        {
+            "name": "castle-13-1",
+            "index": [ 13 , 1 ]
+        },
+        {
+            "name": "castle-13-2",
+            "index": [ 13 , 2 ]
+        },
+        {
+            "name": "castle-13-3",
+            "index": [ 13 , 3 ]
+        },
+        {
+            "name": "castle-13-4",
+            "index": [ 13 , 4 ]
+        },
+        {
+            "name": "castle-13-5",
+            "index": [ 13 , 5 ]
+        },
+        {
+            "name": "castle-13-6",
+            "index": [ 13 , 6 ]
+        },
+        {
+            "name": "castle-13-7",
+            "index": [ 13 , 7 ]
+        },
+        {
+            "name": "castle-13-8",
+            "index": [ 13 , 8 ]
+        },
+        {
+            "name": "castle-13-9",
+            "index": [ 13 , 9 ]
+        },
+        {
+            "name": "castle-14-0",
+            "index": [ 14 , 0 ]
+        },
+        {
+            "name": "castle-14-1",
+            "index": [ 14 , 1 ]
+        },
+        {
+            "name": "castle-14-2",
+            "index": [ 14 , 2 ]
+        },
+        {
+            "name": "castle-14-3",
+            "index": [ 14 , 3 ]
+        },
+        {
+            "name": "castle-14-4",
+            "index": [ 14 , 4 ]
+        },
+        {
+            "name": "castle-14-5",
+            "index": [ 14 , 5 ]
+        },
+        {
+            "name": "castle-14-6",
+            "index": [ 14 , 6 ]
+        },
+        {
+            "name": "castle-14-7",
+            "index": [ 14 , 7 ]
+        },
+        {
+            "name": "castle-14-8",
+            "index": [ 14 , 8 ]
+        },
+        {
+            "name": "castle-14-9",
+            "index": [ 14 , 9 ]
+        },
+        {
+            "name": "castle-15-0",
+            "index": [ 15 , 0 ]
+        },
+        {
+            "name": "castle-15-1",
+            "index": [ 15 , 1 ]
+        },
+        {
+            "name": "castle-15-2",
+            "index": [ 15 , 2 ]
+        },
+        {
+            "name": "castle-15-3",
+            "index": [ 15 , 3 ]
+        },
+        {
+            "name": "castle-15-4",
+            "index": [ 15 , 4 ]
+        },
+        {
+            "name": "castle-15-5",
+            "index": [ 15 , 5 ]
+        },
+        {
+            "name": "castle-15-6",
+            "index": [ 15 , 6 ]
+        },
+        {
+            "name": "castle-15-7",
+            "index": [ 15 , 7 ]
+        },
+        {
+            "name": "castle-15-8",
+            "index": [ 15 , 8 ]
+        },
+        {
+            "name": "castle-15-9",
+            "index": [ 15 , 9 ]
+        },
+        {
+            "name": "castle-16-0",
+            "index": [ 16 , 0 ]
+        },
+        {
+            "name": "castle-16-1",
+            "index": [ 16 , 1 ]
+        },
+        {
+            "name": "castle-16-2",
+            "index": [ 16 , 2 ]
+        },
+        {
+            "name": "castle-16-3",
+            "index": [ 16 , 3 ]
+        },
+        {
+            "name": "castle-16-4",
+            "index": [ 16 , 4 ]
+        },
+        {
+            "name": "castle-16-5",
+            "index": [ 16 , 5 ]
+        },
+        {
+            "name": "castle-16-6",
+            "index": [ 16 , 6 ]
+        },
+        {
+            "name": "castle-16-7",
+            "index": [ 16 , 7 ]
+        },
+        {
+            "name": "castle-16-8",
+            "index": [ 16 , 8 ]
+        },
+        {
+            "name": "castle-16-9",
+            "index": [ 16 , 9 ]
+        },
+        {
+            "name": "castle-17-0",
+            "index": [ 17 , 0 ]
+        },
+        {
+            "name": "castle-17-1",
+            "index": [ 17 , 1 ]
+        },
+        {
+            "name": "castle-17-2",
+            "index": [ 17 , 2 ]
+        },
+        {
+            "name": "castle-17-3",
+            "index": [ 17 , 3 ]
+        },
+        {
+            "name": "castle-17-4",
+            "index": [ 17 , 4 ]
+        },
+        {
+            "name": "castle-17-5",
+            "index": [ 17 , 5 ]
+        },
+        {
+            "name": "castle-17-6",
+            "index": [ 17 , 6 ]
+        },
+        {
+            "name": "castle-17-7",
+            "index": [ 17 , 7 ]
+        },
+        {
+            "name": "castle-17-8",
+            "index": [ 17 , 8 ]
+        },
+        {
+            "name": "castle-17-9",
+            "index": [ 17 , 9 ]
+        },
+
+        {
+            "name": "flag-0-8",
+            "index": [ 0 , 8 ]
+        },
+        {
+            "name": "flag-0-9",
+            "index": [ 0 , 9 ]
+        },
+        {
+            "name": "flag-0-10",
+            "index": [ 0 , 10 ]
+        },
+        {
+            "name": "flag-0-11",
+            "index": [ 0 , 11 ]
+        },
+        {
+            "name": "flag-0-12",
+            "index": [ 0 , 12 ]
+        },
+        {
+            "name": "flag-0-13",
+            "index": [ 0 , 13 ]
+        },
+        {
+            "name": "flag-0-14",
+            "index": [ 0 , 14 ]
+        },
+        {
+            "name": "flag-0-15",
+            "index": [ 0 , 15 ]
+        },
+        {
+            "name": "flag-0-16",
+            "index": [ 0 , 16 ]
+        },
+        {
+            "name": "flag-0-17",
+            "index": [ 0 , 17 ]
+        },
+        {
+            "name": "flag-0-18",
+            "index": [ 0 , 18 ]
+        },
+        {
+            "name": "flag-1-8",
+            "index": [ 1 , 8 ]
+        },
+        {
+            "name": "flag-1-9",
+            "index": [ 1 , 9 ]
+        },
+        {
+            "name": "flag-1-10",
+            "index": [ 1 , 10 ]
+        },
+        {
+            "name": "flag-1-11",
+            "index": [ 1 , 11 ]
+        },
+        {
+            "name": "flag-1-12",
+            "index": [ 1 , 12 ]
+        },
+        {
+            "name": "flag-1-13",
+            "index": [ 1 , 13 ]
+        },
+        {
+            "name": "flag-1-14",
+            "index": [ 1 , 14 ]
+        },
+        {
+            "name": "flag-1-15",
+            "index": [ 1 , 15 ]
+        },
+        {
+            "name": "flag-1-16",
+            "index": [ 1 , 16 ]
+        },
+        {
+            "name": "flag-1-17",
+            "index": [ 1 , 17 ]
+        },
+        {
+            "name": "flag-1-18",
+            "index": [ 1 , 18 ]
         }
+
+
+
     ]
 }
 

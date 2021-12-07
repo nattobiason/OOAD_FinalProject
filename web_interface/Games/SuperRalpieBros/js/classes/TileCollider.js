@@ -19,6 +19,12 @@ export default class TileCollider{
         matches.forEach(match =>{
 
             if(match.tile.type !== 'static'){
+                if(match.tile.type === 'death'){
+                    console.log("die");
+                }
+                if(match.tile.type === 'flag'){
+                    console.log("You passed level 1-1!")
+                }
                 return;
             }
             if(entity.vel.x > 0){ // if idle is falling
@@ -49,6 +55,9 @@ export default class TileCollider{
         matches.forEach(match =>{
 
             if(match.tile.type !== 'static'){
+                if(match.tile.type === 'death'){
+                    console.log("stomp");
+                }
                 return;
             }
             if(entity.vel.y > 0){ // if idle is falling
@@ -64,7 +73,7 @@ export default class TileCollider{
                 }
                 if(match.tile.name == 'super-box'){
                     match.tile.name = 'platform-3';
-                    console.log(entity);
+                    console.log("points");
                 }
             }
         });

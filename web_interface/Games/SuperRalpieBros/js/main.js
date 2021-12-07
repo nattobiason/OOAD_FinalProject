@@ -4,18 +4,19 @@ import { createRalphie } from './createRalphie.js'
 import { setupKeyboard } from './input.js'
 import Camera from './classes/Camera.js'
 import { createCameraLayer } from './layers.js'
+import User from './classes/User.js'
 
 
 
 
 const canvas = document.getElementById('game-area');
 const context = canvas.getContext('2d');
-
+const user = new User();
 
 
 Promise.all([ // load everything in parellel
     createRalphie(),
-    loadLevel('1-1')
+    loadLevel(user.world)
 ])
 .then(([ ralphie, level ]) => {
 
