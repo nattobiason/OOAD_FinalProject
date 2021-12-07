@@ -203,16 +203,7 @@
                 ]
             ]
         },
-        {
-            "tile": "bad-shroom",
-            "type": "death",
-            "ranges": [
-                [
-                    17, 1,
-                    11, 1
-                ]
-            ]
-        },
+
         {
             "tile": "sky",
             "type": "",

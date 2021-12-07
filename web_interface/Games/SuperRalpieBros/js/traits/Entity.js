@@ -1,4 +1,4 @@
-import Vector from "./Math.js";
+import Vector from "../classes/Math.js";
 
 export class Trait{
     constructor(name){

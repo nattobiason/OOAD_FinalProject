@@ -45,3 +45,8 @@ last priority:
 - down arrow to shrink
 
 
+Patterns Used:
+
+1. Singleton: 
+    - Named Single_User class
+    - so that only one instance of the current user can be created

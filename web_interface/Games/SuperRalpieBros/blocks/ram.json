@@ -1,0 +1,13 @@
+{
+    "imageURL": "/web_interface/Games/SuperRalpieBros/img/pixil-frame-0.png",
+    "tileW": 18, 
+    "tileH": 16,
+    "frames": [
+        {
+            "name": "ram",
+            "rect": [1.78, 3]
+        }
+    ]
+
+
+}

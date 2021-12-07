@@ -1,32 +1,37 @@
 import {loadLevel} from './loaders.js'
 import Timer from './classes/Timer.js'
-import { createRalphie } from './createRalphie.js'
+import { createRalphie, createRam } from './Factory.js'
 import { setupKeyboard } from './input.js'
 import Camera from './classes/Camera.js'
 import { createCameraLayer } from './layers.js'
-import User from './classes/User.js'
+import Single_User from './classes/Singleton_User.js'
+
 
 
 
 
 const canvas = document.getElementById('game-area');
 const context = canvas.getContext('2d');
-const user = new User();
+const user = new Single_User();
+
 
 
 Promise.all([ // load everything in parellel
     createRalphie(),
-    loadLevel(user.world)
+    createRam(),
+    loadLevel(user.current_world)
 ])
-.then(([ ralphie, level ]) => {
+.then(([ ralphie, ram, level ]) => {
 
     const camera =  new Camera();
     
     ralphie.pos.set(64, 64);
+    ram.pos.set(275, 64);
 
     level.comp.layers.push(createCameraLayer(camera));
 
     level.entities.add(ralphie);
+    level.entities.add(ram);
 
     const input = setupKeyboard(ralphie);
     input.listenTo(window);

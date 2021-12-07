@@ -1,4 +1,4 @@
-import Entity from './classes/Entity.js';
+import Entity from './traits/Entity.js';
 import { Go } from './traits/Go.js';
 import { Jump } from './traits/Jump.js';
 import { loadBlockSheet } from './loaders.js';
@@ -9,7 +9,7 @@ export function createRalphie(){
         const ralphie = new Entity();
         ralphie.size.set(32, 25);
 
-        ralphie.addTrait(new Go());
+        ralphie.addTrait(new Go(6000, 1, 0));
         ralphie.addTrait(new Jump());
 
         function routeFrame(ralphie){
@@ -25,4 +25,26 @@ export function createRalphie(){
         return ralphie;
     });
 
+}
+
+export function createRam(){
+    return loadBlockSheet('ram')
+    .then(block =>{
+        const ram = new Entity();
+        ram.size.set(18, 16);
+
+        ram.addTrait(new Go(-1500, 1, 1));
+
+        function routeFrame(ram){
+            return 'ram';
+            // if want to animate running, go to ep.7 10:15
+        }
+
+        ram.draw = function drawRam(context){
+            block.draw(routeFrame(this), context, 0, 0, ram.go.heading < 0);
+        }
+        
+
+        return ram;
+    });
 }

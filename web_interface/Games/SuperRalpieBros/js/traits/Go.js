@@ -1,11 +1,11 @@
-import { Trait } from '../classes/Entity.js';
+import { Trait } from './Entity.js';
 
 export class Go extends Trait{
-    constructor(){
+    constructor(speed, heading, dir){
         super('go');
-        this.direction = 0; 
-        this.speed = 6000;
-        this.heading = 1; // 1 for heading right, 0 for heading left
+        this.direction = dir; 
+        this.speed = speed;
+        this.heading = heading; // 1 for heading right, 0 for heading left
     }
 
     update(entitiy, deltaTime){
