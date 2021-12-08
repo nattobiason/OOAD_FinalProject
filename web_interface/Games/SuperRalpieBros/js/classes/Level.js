@@ -11,15 +11,15 @@ export default class Level{
 
         this.tileCollider = new TileCollider(this.tiles);
     }
-    update(deltaTime){
+    update(deltaTime, user){
         this.entities.forEach(entity =>{
             entity.update(deltaTime);
 
             entity.pos.x += entity.vel.x * deltaTime;
-            this.tileCollider.checkX(entity);
+            this.tileCollider.checkX(entity, user);
 
             entity.pos.y += entity.vel.y * deltaTime;
-            this.tileCollider.checkY(entity);
+            this.tileCollider.checkY(entity, user);
             entity.vel.y += this.gravity * deltaTime;
         });
     }

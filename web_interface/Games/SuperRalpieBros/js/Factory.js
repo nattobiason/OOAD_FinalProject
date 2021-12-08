@@ -14,7 +14,6 @@ export function createRalphie(){
 
         function routeFrame(ralphie){
             return 'ralphie';
-            // if want to animate running, go to ep.7 10:15
         }
 
         ralphie.draw = function drawRalphie(context){
@@ -37,7 +36,6 @@ export function createRam(){
 
         function routeFrame(ram){
             return 'ram';
-            // if want to animate running, go to ep.7 10:15
         }
 
         ram.draw = function drawRam(context){

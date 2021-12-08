@@ -1,10 +1,11 @@
-
-
+// singleton pattern
 export default class Single_User{
-    constructor(){
+    constructor(canvas, context){
         if(Single_User.instance){
             throw new Error("Singleton classes can't be instantiated more than once");
         }
+        this.canvas = canvas;
+        this.context = context;
         this.score = 0;
         this.lives = 3;
         this.coins = 0;
@@ -19,6 +20,7 @@ export default class Single_User{
     }
     add_available_world(world){
         this.available_worlds[this.available_worlds.length] = world;
+        console.log("New world unlocked: 1-2")
     }
     update_score(add){
         this.score+=add;
@@ -42,4 +44,10 @@ export default class Single_User{
     deleteUser(){
         Single_User.instance = null;
     }
+    
+    // level_reset(){
+    //     this.coins = 0;
+    //     this.score = 0;
+    //     begin_level(this.canvas, this.context, this);
+    // }
 }

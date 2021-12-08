@@ -1,11 +1,16 @@
-import { loadLevel } from "../loaders.js";
 import TileResolver from "./TileResolver.js";
+import { SuperBox } from "./State.js";
+import Block from "./Block.js";
+import { loadJSON } from "../loaders.js";
+// has been edited: but og code came from https://www.youtube.com/watch?v=YLMP5jmtpYc&ab_channel=MethMethMethod
+
+
 
 export default class TileCollider{
     constructor(tileMatrix){
         this.tiles = new TileResolver(tileMatrix);
     }
-    checkX(entity){
+    checkX(entity, user){
         let x;
         if(entity.vel.x > 0){
             x = entity.pos.x + entity.size.x;
@@ -21,6 +26,8 @@ export default class TileCollider{
             if(match.tile.type !== 'static'){
                 if(match.tile.type === 'death'){
                     console.log("die");
+                    user.update_lives();
+                    // user.level_reset();
                 }
                 if(match.tile.type === 'flag'){
                     console.log("You passed level 1-1!")
@@ -41,7 +48,7 @@ export default class TileCollider{
             }
         });
     }
-    checkY(entity){
+    checkY(entity, user){
         let y;
         if(entity.vel.y > 0){
             y = entity.pos.y + entity.size.y;
@@ -54,13 +61,18 @@ export default class TileCollider{
 
         matches.forEach(match =>{
 
-            if(match.tile.type !== 'static'){
-                if(match.tile.type === 'death'){
-                    console.log("stomp");
-                }
+            if(match.tile.type !== 'static' && match.tile.type !== 'death'){
+
                 return;
             }
+            
             if(entity.vel.y > 0){ // if idle is falling
+                if(match.tile.type === 'death'){
+                    match.tile.name = 'sky';
+                    match.tile.type = "";
+                    console.log("stomp");
+                    user.update_score(200);
+                }
                 if(entity.pos.y + entity.size.y > match.y1){  // inside the tile
                     entity.pos.y = match.y1 - entity.size.y;
                     entity.vel.y = 0;
@@ -73,7 +85,12 @@ export default class TileCollider{
                 }
                 if(match.tile.name == 'super-box'){
                     match.tile.name = 'platform-3';
-                    console.log("points");
+                    user.update_score(200);
+
+
+                    var box = new SuperBox();
+                    const power = box.start(); // state patern
+
                 }
             }
         });
