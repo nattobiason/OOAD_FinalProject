@@ -39,7 +39,7 @@ htmlApp.count=0;
 //card class
 class card1 {
   constructor(suit, value, name,c_value) {
-      this.suit = suit; // string of c/d/h/s
+      this.suit = suit; // string of suite
       this.value = value; // number 1 - 10
       this.name = name; // string of the full card name
       this.c_value=c_value; //card counting value
@@ -102,15 +102,21 @@ class deck {
     this.deck1=shuffledDeck;
     console.log("Deck created!");
   }
-
+  //used for the deck shuffeling
   getRandomInt(min, max) {
       min = Math.ceil(min);
       max = Math.floor(max);
       return Math.floor(Math.random() * (max - min)) + min;
       // code based on sample from MDN
   }
-
+  //facade keeps the traversal of the deck behide a function
   deal_card(){
+    if(this.deck1.length==1){
+      let card=this.deck1.pop()
+      htmlApp.count=0
+      this.build()
+      return;
+    }
     let card=this.deck1.pop()
     return card
   }
@@ -127,6 +133,7 @@ class player {
   cards() {
     return this.cards
   }
+  //how to add a card to your hand
   Build_hand(card){
     this.cards.push(card);
   }
@@ -134,6 +141,7 @@ class player {
     this.cards=[]
   }
 }
+
 
 class dealer{
   constructor(cards){
@@ -474,24 +482,22 @@ htmlApp.playButton.addEventListener("click", newGame);
 
 // Hit button pressed:
 htmlApp.hitButton.addEventListener("click", function () {
-
     // deal a card to the player
     G.hit();
 });
-
 // Stay button pressed:
 htmlApp.stayButton.addEventListener("click", function () {
     G.stay();
 });
-
+//double down
 htmlApp.doubleButton.addEventListener("click", function () {
   G.doubleDown();
 });
-
+//surrender
 htmlApp.surrenderButton.addEventListener("click", function () {
     G.surrender();
 });
-
+//insurance
 htmlApp.insuranceButton.addEventListener("click", function () {
     G.insurance();
 });
