@@ -4,6 +4,15 @@ body
     font-size: 18px;
 
 }
+iframe
+{
+ display: block;
+ width: 100%;
+ height: 90vh;
+ border: none;
+ overflow-y: auto;
+ overflow-x: hidden;
+}
 
 h1{
     text-align: center;
@@ -26,6 +35,7 @@ th
 {
     color: #2336ac;
 }
+
 
 div.buttonbox
 {
