@@ -141,21 +141,28 @@ class player {
     this.cards=[]
   }
 }
-
-
+//singleton pattern here:
 class dealer{
-  constructor(cards){
-    this.cards=cards
-  }
-  buildhand(card){
-    this.cards.push(card);
-  }
-
+    constructor(cards){
+        if(dealer.instance){
+            throw new Error("Singleton classes can't be instantiated more than once");
+        }
+        this.cards=cards
+        dealer.instance = this;
+        }
+        buildhand(card){
+          this.cards.push(card);
+        }
+        clearhand(){
+          this.cards=[];
+        }
 }
+
 
 class game {
   //this checks to see if the player has stood yet. if not the second dealer card is kept hidden
   num=0
+  flag=0
   constructor(numplayers,deck,turn_num,players,dealer) {
       this.numplayers = numplayers;
       this.deck = deck;
@@ -219,8 +226,17 @@ class game {
     this.players=player1
     console.log(player1.cards);
 //build the dealer and save it to game
-    let dealer1=new dealer([this.deck.deal_card(),this.deck.deal_card()]);
-    this.dealer=dealer1
+    if(this.flag===0){
+      let dealer1=new dealer([this.deck.deal_card(),this.deck.deal_card()]);
+      this.dealer=dealer1
+      this.flag=1
+    }
+    else{
+      this.dealer.clearhand();
+      this.dealer.buildhand(this.deck.deal_card());
+      this.dealer.buildhand(this.deck.deal_card());
+
+    }
     this.updateHtml();
 
     if(this.Blackjack()){
