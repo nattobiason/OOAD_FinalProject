@@ -141,7 +141,7 @@ class player {
     this.cards=[]
   }
 }
-
+//singleton pattern here:
 class dealer{
     constructor(cards){
         if(dealer.instance){
