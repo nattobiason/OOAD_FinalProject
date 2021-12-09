@@ -141,14 +141,10 @@ class player {
     this.cards=[]
   }
 }
-//singleton pattern here:
+
 class dealer{
     constructor(cards){
-        if(dealer.instance){
-            throw new Error("Singleton classes can't be instantiated more than once");
-        }
         this.cards=cards
-        dealer.instance = this;
         }
         buildhand(card){
           this.cards.push(card);
@@ -217,26 +213,12 @@ class game {
     // reset text and variables for newgame
     htmlApp.dcards.innerHTML = "";
     //build the new deck and save it
-    let table_deck = new deck(6);
-    table_deck.build();
-    this.deck=table_deck
+    let fact=new factory();
+    fact.make();
+    this.deck=fact.deck;
+    this.players=fact.players;
+    this.dealer=fact.dealer;
 
-    //build the player and save it to game
-    let player1=new player(100,[this.deck.deal_card(),this.deck.deal_card()]);
-    this.players=player1
-    console.log(player1.cards);
-//build the dealer and save it to game
-    if(this.flag===0){
-      let dealer1=new dealer([this.deck.deal_card(),this.deck.deal_card()]);
-      this.dealer=dealer1
-      this.flag=1
-    }
-    else{
-      this.dealer.clearhand();
-      this.dealer.buildhand(this.deck.deal_card());
-      this.dealer.buildhand(this.deck.deal_card());
-
-    }
     this.updateHtml();
 
     if(this.Blackjack()){
@@ -453,6 +435,26 @@ class game {
   }
 
 
+}
+class factory{
+  constructor(deck,players,dealer){
+    this.deck=deck;
+    this.players=player;
+    this.dealer=dealer;
+  }
+  make(){
+      let table_deck = new deck(6);
+      table_deck.build();
+      this.deck=table_deck
+
+      //build the player and save it to game
+      let player1=new player(100,[this.deck.deal_card(),this.deck.deal_card()]);
+      this.players=player1
+  //build the dealer and save it to game
+      let dealer1=new dealer([this.deck.deal_card(),this.deck.deal_card()]);
+      this.dealer=dealer1
+      this.flag=1
+    }
 }
 
 
