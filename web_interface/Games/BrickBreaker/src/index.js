@@ -113,13 +113,13 @@ class Game {
 let canvas = document.getElementById("gameScreen");
 let context =  canvas.getContext("2d");
 
-const GAME_WIDTH = 1200;
-const GAME_HEIGHT = 600;
+const GAME_WIDTH = 200;
+const GAME_HEIGHT = 180;
 
 let game = new Game(GAME_WIDTH, GAME_HEIGHT)
 game.start();
 
-context.clearRect(0, 0, 1200, 600);
+context.clearRect(0, 0, 200, 180);
 
 let lastTime = 0;
 

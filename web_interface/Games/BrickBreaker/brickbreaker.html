@@ -8,16 +8,17 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(function(){
-            $('#navbar').load('Navbar/navbar.html');
+            $('#navbar').load('/web_interface/Navbar/navbar.html');
         });
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Electrolize&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/web_interface/app.css">
     <link rel="stylesheet" href="/web_interface/Navbar/navbar.css">
+    <link rel="stylesheet" href="/web_interface/Games/BrickBreaker/brick.css">
     <title>Document</title>
 </head>
 <body>
-    <h1 class ="title"> 
+    <h1 class ="title">
         <span class="color1"> Cooler </span>
         <span class="color2"> Math </span>
         <span class="color2"> Games </span>
@@ -25,5 +26,16 @@
     <div class="container">
         <div id="navbar"></div>
     </div>
+    
+    <img id="img_ball" src="imgs/ball1.jpg">
+    <div style="text-align:center"> 
+        <canvas id="gameScreen" ></canvas>
+      </div>
+    
+    
+    <script src ="src/load.js"></script>
+    <script src ="src/index.js"></script>
+
+
 </body>
 </html>

@@ -1,7 +1,5 @@
 import TileResolver from "./TileResolver.js";
 import { SuperBox } from "./State.js";
-import Block from "./Block.js";
-import { loadJSON } from "../loaders.js";
 // has been edited: but og code came from https://www.youtube.com/watch?v=YLMP5jmtpYc&ab_channel=MethMethMethod
 
 
